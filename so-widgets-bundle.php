@@ -1,11 +1,13 @@
 <?php
 
 /*
-Plugin Name: PS Widgets Bundle
-Description: A collection of our base widgets, neatly bundled into a single plugin.
-Version: 1.2.4
-License: GPL3
-License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+ *  Plugin Name: PS Widgets Bundle
+ *  Description: A collection of our base widgets, neatly bundled into a single plugin.
+ *  Version: 1.2.4
+ *	Author: Mitchell Bray
+ *	Author URI: http://webcreationcentre.com.au/
+ *	GitHub Plugin URI:	unetics/widget-bundle
+ *	GitHub Branch:		master
 */
 
 define('SOW_BUNDLE_VERSION', '1.2.4');
