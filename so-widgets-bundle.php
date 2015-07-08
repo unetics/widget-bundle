@@ -3,7 +3,7 @@
 /*
  *  Plugin Name: PS Widgets Bundle
  *  Description: A collection of our base widgets, neatly bundled into a single plugin.
- *  Version: 1.2.4
+ *  Version: 1.2.5
  *	Author: Mitchell Bray
  *	Author URI: http://webcreationcentre.com.au/
  *	GitHub Plugin URI:	unetics/widget-bundle

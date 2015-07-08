@@ -380,7 +380,7 @@ abstract class SiteOrigin_Widget extends WP_Widget {
 				<div class="siteorigin-widgets-preview-modal-overlay"></div>
 
 				<div class="so-widget-toolbar">
-					<h3><?php _e('Widget Preview', 'siteorigin-widgets') ?></h3>
+					<h3>Widget Preview</h3>
 					<a href="#" class="close"><span class="dashicons dashicons-arrow-left-alt2"></span></a>
 				</div>
 
@@ -846,6 +846,7 @@ abstract class SiteOrigin_Widget extends WP_Widget {
 		if( !empty( $field['state_name'] ) ) $wrapper_attributes['class'][] = 'siteorigin-widget-field-state-' . $field['state_name'];
 		if( !empty( $field['hidden'] ) ) $wrapper_attributes['class'][] = 'siteorigin-widget-field-is-hidden';
 		if( !empty( $field['optional'] ) ) $wrapper_attributes['class'][] = 'siteorigin-widget-field-is-optional';
+		if( !empty( $field['class'] ) ) $wrapper_attributes['class'][] = $field['class'];
 		$wrapper_attributes['class'] = implode(' ', array_map('sanitize_html_class', $wrapper_attributes['class']) );
 
 		if( !empty($field['state_emitter']) ) {
@@ -873,7 +874,7 @@ abstract class SiteOrigin_Widget extends WP_Widget {
 				<?php
 				echo $field['label'];
 				if( !empty( $field['optional'] ) ) {
-					echo ' <span class="field-optional">(' . __('Optional', 'siteorigin-panels') . ')</span>';
+					echo ' <span class="field-optional">(Optional)</span>';
 				}
 				?>
 			</label>
@@ -980,7 +981,7 @@ abstract class SiteOrigin_Widget extends WP_Widget {
 
 			case 'media':
 				if( version_compare( get_bloginfo('version'), '3.5', '<' ) ){
-					printf( __('You need to <a href="%s">upgrade</a> to WordPress 3.5 to use media fields', 'siteorigin-widgets'), admin_url('update-core.php') );
+					printf('You need to <a href="%s">upgrade</a> to WordPress 3.5 to use media fields', admin_url('update-core.php') );
 					break;
 				}
 
@@ -1014,7 +1015,7 @@ abstract class SiteOrigin_Widget extends WP_Widget {
 						<?php echo esc_html($choose_title) ?>
 					</a>
 				</div>
-				<a href="#" class="media-remove-button <?php if( empty($value) ) echo 'remove-hide'; ?>"><?php esc_html_e('Remove', 'siteorigin-widgets') ?></a>
+				<a href="#" class="media-remove-button <?php if( empty($value) ) echo 'remove-hide'; ?>">Remove</a>
 
 				<?php
 				if( !empty( $field['fallback'] ) ) {
